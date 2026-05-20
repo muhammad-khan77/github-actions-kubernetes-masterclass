@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 72 - Mega Project MCQs | GitHub Actions & Kubernetes</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f7fb; margin: 0; padding: 0; color: #222; }
+    header { background: #1f2937; color: white; padding: 30px 20px; text-align: center; }
+    header h1 { margin: 0; font-size: 28px; }
+    header p { margin-top: 10px; font-size: 16px; color: #d1d5db; }
+    .container { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
+    .summary, .question-card { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); margin-bottom: 20px; }
+    .summary h2, .question-card h3 { margin-top: 0; color: #111827; }
+    .question-card h3 { font-size: 18px; }
+    label { display: block; margin: 10px 0; padding: 10px; border-radius: 8px; background: #f9fafb; cursor: pointer; border: 1px solid #e5e7eb; }
+    label:hover { background: #eef2ff; }
+    input[type="radio"] { margin-right: 10px; }
+    button { background: #2563eb; color: white; border: none; padding: 14px 24px; font-size: 16px; border-radius: 10px; cursor: pointer; margin: 20px 10px 30px 0; }
+    button:hover { background: #1d4ed8; }
+    .reset-btn { background: #6b7280; }
+    .reset-btn:hover { background: #4b5563; }
+    .result { background: #ecfdf5; border: 1px solid #10b981; padding: 20px; border-radius: 12px; margin-bottom: 30px; display: none; font-size: 18px; font-weight: bold; }
+    .correct { background: #dcfce7 !important; border-color: #22c55e !important; }
+    .incorrect { background: #fee2e2 !important; border-color: #ef4444 !important; }
+    .answer { display: none; margin-top: 10px; font-weight: bold; color: #065f46; }
+    footer { text-align: center; padding: 20px; color: #6b7280; font-size: 14px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Day 72 - Mega Project MCQs</h1>
+  <p>GitHub Actions, Docker, Docker Hub, Kubernetes, kind, and SkillPulse Deployment</p>
+</header>
+<div class="container">
+  <div class="summary">
+    <h2>Quiz Summary</h2>
+    <p>This quiz contains 25 multiple-choice questions based on the SkillPulse mega project. It covers CI/CD, Docker image builds, GitHub Actions secrets, Docker Hub, Kubernetes pods, services, kind cluster setup, NodePort access, and ARM64 troubleshooting.</p>
+  </div>
+  <div id="result" class="result"></div>
+  <form id="quizForm">
+    <div class="question-card" data-answer="B">
+      <h3>1. What is the main purpose of the SkillPulse mega project?</h3>
+      <label><input type="radio" name="q1" value="A"> To build only a static website</label>
+      <label><input type="radio" name="q1" value="B"> To demonstrate a complete DevOps workflow using CI/CD, Docker, and Kubernetes</label>
+      <label><input type="radio" name="q1" value="C"> To create only a MySQL database</label>
+      <label><input type="radio" name="q1" value="D"> To practice only Linux commands</label>
+      <div class="answer">Correct Answer: B</div>
+    </div>
+
+    <div class="question-card" data-answer="C">
+      <h3>2. Which tool was used for CI/CD automation?</h3>
+      <label><input type="radio" name="q2" value="A"> Jenkins</label>
+      <label><input type="radio" name="q2" value="B"> GitLab CI</label>
+      <label><input type="radio" name="q2" value="C"> GitHub Actions</label>
+      <label><input type="radio" name="q2" value="D"> CircleCI</label>
+      <div class="answer">Correct Answer: C</div>
+    </div>
+
+    <div class="question-card" data-answer="A">
+      <h3>3. What does the CI workflow build in this project?</h3>
+      <label><input type="radio" name="q3" value="A"> Backend and frontend Docker images</label>
+      <label><input type="radio" name="q3" value="B"> Only documentation files</label>
+      <label><input type="radio" name="q3" value="C"> Only Kubernetes nodes</label>
+      <label><input type="radio" name="q3" value="D"> Only MySQL tables</label>
+      <div class="answer">Correct Answer: A</div>
+    </div>
+
+    <div class="question-card" data-answer="D">
+      <h3>4. Which repository setting stores Docker Hub username and token securely?</h3>
+      <label><input type="radio" name="q4" value="A"> Git branches</label>
+      <label><input type="radio" name="q4" value="B"> README.md</label>
+      <label><input type="radio" name="q4" value="C"> Issues tab</label>
+      <label><input type="radio" name="q4" value="D"> GitHub Actions Secrets</label>
+      <div class="answer">Correct Answer: D</div>
+    </div>
+
+    <div class="question-card" data-answer="B">
+      <h3>5. Which secret name was used for Docker Hub username?</h3>
+      <label><input type="radio" name="q5" value="A"> DOCKER_USER</label>
+      <label><input type="radio" name="q5" value="B"> DOCKERHUB_USERNAME</label>
+      <label><input type="radio" name="q5" value="C"> USERNAME_SECRET</label>
+      <label><input type="radio" name="q5" value="D"> HUB_LOGIN</label>
+      <div class="answer">Correct Answer: B</div>
+    </div>
+
+    <div class="question-card" data-answer="A">
+      <h3>6. Which repository variable enabled deployment behavior?</h3>
+      <label><input type="radio" name="q6" value="A"> DEPLOY_ENABLED=true</label>
+      <label><input type="radio" name="q6" value="B"> DEPLOY_NOW=yes</label>
+      <label><input type="radio" name="q6" value="C"> START_PIPELINE=true</label>
+      <label><input type="radio" name="q6" value="D"> RUN_K8S=yes</label>
+      <div class="answer">Correct Answer: A</div>
+    </div>
+
+    <div class="question-card" data-answer="C">
+      <h3>7. Why did the first Markdown-only commit not trigger CI?</h3>
+      <label><input type="radio" name="q7" value="A"> GitHub was offline</label>
+      <label><input type="radio" name="q7" value="B"> Docker was not installed</label>
+      <label><input type="radio" name="q7" value="C"> The workflow ignored Markdown files using paths-ignore</label>
+      <label><input type="radio" name="q7" value="D"> The branch was deleted</label>
+      <div class="answer">Correct Answer: C</div>
+    </div>
+
+    <div class="question-card" data-answer="B">
+      <h3>8. Which file change successfully triggered CI?</h3>
+      <label><input type="radio" name="q8" value="A"> docs/notes.md</label>
+      <label><input type="radio" name="q8" value="B"> frontend/js/app.js</label>
+      <label><input type="radio" name="q8" value="C"> README.md</label>
+      <label><input type="radio" name="q8" value="D"> docs/guide.pdf</label>
+      <div class="answer">Correct Answer: B</div>
+    </div>
+
+    <div class="question-card" data-answer="D">
+      <h3>9. Which platform was used as the Docker image registry?</h3>
+      <label><input type="radio" name="q9" value="A"> AWS S3</label>
+      <label><input type="radio" name="q9" value="B"> GitHub Issues</label>
+      <label><input type="radio" name="q9" value="C"> NPM Registry</label>
+      <label><input type="radio" name="q9" value="D"> Docker Hub</label>
+      <div class="answer">Correct Answer: D</div>
+    </div>
+
+    <div class="question-card" data-answer="A">
+      <h3>10. What is kind used for?</h3>
+      <label><input type="radio" name="q10" value="A"> Running a local Kubernetes cluster using Docker containers</label>
+      <label><input type="radio" name="q10" value="B"> Editing HTML files</label>
+      <label><input type="radio" name="q10" value="C"> Creating GitHub tokens</label>
+      <label><input type="radio" name="q10" value="D"> Managing MySQL users only</label>
+      <div class="answer">Correct Answer: A</div>
+    </div>
+
+    <div class="question-card" data-answer="C">
+      <h3>11. What command was used to create and deploy the local Kubernetes setup?</h3>
+      <label><input type="radio" name="q11" value="A"> docker run app</label>
+      <label><input type="radio" name="q11" value="B"> git push origin main</label>
+      <label><input type="radio" name="q11" value="C"> make up</label>
+      <label><input type="radio" name="q11" value="D"> npm start</label>
+      <div class="answer">Correct Answer: C</div>
+    </div>
+
+    <div class="question-card" data-answer="B">
+      <h3>12. How many Kubernetes nodes were created for the SkillPulse cluster?</h3>
+      <label><input type="radio" name="q12" value="A"> 1</label>
+      <label><input type="radio" name="q12" value="B"> 3</label>
+      <label><input type="radio" name="q12" value="C"> 5</label>
+      <label><input type="radio" name="q12" value="D"> 10</label>
+      <div class="answer">Correct Answer: B</div>
+    </div>
+
+    <div class="question-card" data-answer="A">
+      <h3>13. Which namespace was used for application pods?</h3>
+      <label><input type="radio" name="q13" value="A"> skillpulse</label>
+      <label><input type="radio" name="q13" value="B"> default-app</label>
+      <label><input type="radio" name="q13" value="C"> production</label>
+      <label><input type="radio" name="q13" value="D"> dockerhub</label>
+      <div class="answer">Correct Answer: A</div>
+    </div>
+
+    <div class="question-card" data-answer="D">
+      <h3>14. Which command checks pods in the SkillPulse namespace?</h3>
+      <label><input type="radio" name="q14" value="A"> docker ps -a</label>
+      <label><input type="radio" name="q14" value="B"> git status</label>
+      <label><input type="radio" name="q14" value="C"> kind version</label>
+      <label><input type="radio" name="q14" value="D"> kubectl get pods -n skillpulse</label>
+      <div class="answer">Correct Answer: D</div>
+    </div>
+
+    <div class="question-card" data-answer="C">
+      <h3>15. Which pods were running successfully?</h3>
+      <label><input type="radio" name="q15" value="A"> redis, mongo, apache</label>
+      <label><input type="radio" name="q15" value="B"> jenkins, nginx, postgres</label>
+      <label><input type="radio" name="q15" value="C"> backend, frontend, mysql</label>
+      <label><input type="radio" name="q15" value="D"> terraform, ansible, vault</label>
+      <div class="answer">Correct Answer: C</div>
+    </div>
+
+    <div class="question-card" data-answer="B">
+      <h3>16. Which service type exposed the frontend?</h3>
+      <label><input type="radio" name="q16" value="A"> LoadBalancer only</label>
+      <label><input type="radio" name="q16" value="B"> NodePort</label>
+      <label><input type="radio" name="q16" value="C"> ExternalName</label>
+      <label><input type="radio" name="q16" value="D"> Headless only</label>
+      <div class="answer">Correct Answer: B</div>
+    </div>
+
+    <div class="question-card" data-answer="A">
+      <h3>17. Which local URL opened the deployed app?</h3>
+      <label><input type="radio" name="q17" value="A"> http://localhost:8888</label>
+      <label><input type="radio" name="q17" value="B"> http://localhost:3000</label>
+      <label><input type="radio" name="q17" value="C"> http://github.com</label>
+      <label><input type="radio" name="q17" value="D"> http://localhost:22</label>
+      <div class="answer">Correct Answer: A</div>
+    </div>
+
+    <div class="question-card" data-answer="D">
+      <h3>18. What health check response confirmed the app was working?</h3>
+      <label><input type="radio" name="q18" value="A"> {"error":"failed"}</label>
+      <label><input type="radio" name="q18" value="B"> {"build":"pending"}</label>
+      <label><input type="radio" name="q18" value="C"> {"status":"down"}</label>
+      <label><input type="radio" name="q18" value="D"> {"status":"healthy"}</label>
+      <div class="answer">Correct Answer: D</div>
+    </div>
+
+    <div class="question-card" data-answer="C">
+      <h3>19. What caused the SIGSEGV issue with kind?</h3>
+      <label><input type="radio" name="q19" value="A"> Wrong GitHub password</label>
+      <label><input type="radio" name="q19" value="B"> Missing README file</label>
+      <label><input type="radio" name="q19" value="C"> Wrong kind binary architecture</label>
+      <label><input type="radio" name="q19" value="D"> Invalid CSS file</label>
+      <div class="answer">Correct Answer: C</div>
+    </div>
+
+    <div class="question-card" data-answer="B">
+      <h3>20. What architecture was detected on the WSL2 machine?</h3>
+      <label><input type="radio" name="q20" value="A"> x86</label>
+      <label><input type="radio" name="q20" value="B"> arm64</label>
+      <label><input type="radio" name="q20" value="C"> mips</label>
+      <label><input type="radio" name="q20" value="D"> riscv</label>
+      <div class="answer">Correct Answer: B</div>
+    </div>
+
+    <div class="question-card" data-answer="A">
+      <h3>21. Which command helped identify the system architecture?</h3>
+      <label><input type="radio" name="q21" value="A"> hostnamectl</label>
+      <label><input type="radio" name="q21" value="B"> git clone</label>
+      <label><input type="radio" name="q21" value="C"> docker logout</label>
+      <label><input type="radio" name="q21" value="D"> npm install</label>
+      <div class="answer">Correct Answer: A</div>
+    </div>
+
+    <div class="question-card" data-answer="C">
+      <h3>22. Which kind binary fixed the issue?</h3>
+      <label><input type="radio" name="q22" value="A"> kind-linux-amd64</label>
+      <label><input type="radio" name="q22" value="B"> kind-windows-x86</label>
+      <label><input type="radio" name="q22" value="C"> kind-linux-arm64</label>
+      <label><input type="radio" name="q22" value="D"> kind-macos-intel</label>
+      <div class="answer">Correct Answer: C</div>
+    </div>
+
+    <div class="question-card" data-answer="D">
+      <h3>23. Which command displays Kubernetes nodes?</h3>
+      <label><input type="radio" name="q23" value="A"> git branch</label>
+      <label><input type="radio" name="q23" value="B"> docker images</label>
+      <label><input type="radio" name="q23" value="C"> curl localhost</label>
+      <label><input type="radio" name="q23" value="D"> kubectl get nodes</label>
+      <div class="answer">Correct Answer: D</div>
+    </div>
+
+    <div class="question-card" data-answer="A">
+      <h3>24. What does Docker Hub store in this project?</h3>
+      <label><input type="radio" name="q24" value="A"> Docker images for backend and frontend</label>
+      <label><input type="radio" name="q24" value="B"> GitHub passwords</label>
+      <label><input type="radio" name="q24" value="C"> Kubernetes namespaces only</label>
+      <label><input type="radio" name="q24" value="D"> Browser cookies</label>
+      <div class="answer">Correct Answer: A</div>
+    </div>
+
+    <div class="question-card" data-answer="B">
+      <h3>25. What is the final status of the mega project?</h3>
+      <label><input type="radio" name="q25" value="A"> Failed deployment</label>
+      <label><input type="radio" name="q25" value="B"> Completed successfully</label>
+      <label><input type="radio" name="q25" value="C"> Not started</label>
+      <label><input type="radio" name="q25" value="D"> Deleted from GitHub</label>
+      <div class="answer">Correct Answer: B</div>
+    </div>
+
+    <button type="button" onclick="checkAnswers()">Submit Quiz</button>
+    <button type="button" class="reset-btn" onclick="resetQuiz()">Reset Quiz</button>
+  </form>
+</div>
+<footer>Day 72 Mega Project MCQs | GitHub Actions Kubernetes Masterclass</footer>
+<script>
+  function checkAnswers() {
+    const cards = document.querySelectorAll('.question-card');
+    let score = 0;
+    cards.forEach((card, index) => {
+      const correctAnswer = card.dataset.answer;
+      const selected = card.querySelector(`input[name="q${index + 1}"]:checked`);
+      const labels = card.querySelectorAll('label');
+      const answerText = card.querySelector('.answer');
+      labels.forEach(label => label.classList.remove('correct', 'incorrect'));
+      if (selected) {
+        if (selected.value === correctAnswer) {
+          score++;
+          selected.parentElement.classList.add('correct');
+        } else {
+          selected.parentElement.classList.add('incorrect');
+          labels.forEach(label => {
+            const input = label.querySelector('input');
+            if (input.value === correctAnswer) label.classList.add('correct');
+          });
+        }
+      } else {
+        labels.forEach(label => {
+          const input = label.querySelector('input');
+          if (input.value === correctAnswer) label.classList.add('correct');
+        });
+      }
+      answerText.style.display = 'block';
+    });
+    const result = document.getElementById('result');
+    result.style.display = 'block';
+    result.innerHTML = `Your Score: ${score} / 25`;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  function resetQuiz() {
+    document.getElementById('quizForm').reset();
+    document.getElementById('result').style.display = 'none';
+    document.querySelectorAll('label').forEach(label => label.classList.remove('correct', 'incorrect'));
+    document.querySelectorAll('.answer').forEach(answer => answer.style.display = 'none');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>

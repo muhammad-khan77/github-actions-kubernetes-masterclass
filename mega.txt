@@ -1,0 +1,459 @@
+Script started on 2026-05-17 01:10:47-05:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="78" LINES="49"]
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ [7mcurl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.29.0/kind-linux-arm64[27m[C[C[C[Ccurl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.29.0/kind-linux-arm64
+[?2004l  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100    97  100    97    0     0    283      0 --:--:-- --:--:-- --:--:--   283
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0  9.9M    0  9637    0     0  11038      0  0:15:47 --:--:--  0:15:47 11038100  9.9M  100  9.9M    0     0  9329k      0  0:00:01  0:00:01 --:--:-- 45.0M
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ [7mchmod +x ./kind[27m[C[C[C[Cchmod +x ./kind
+[?2004l[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ [7msudo mv ./kind /usr/local/bin/kind[27m[C[C[C[Csudo mv ./kind /usr/local/bin/kind
+[?2004l[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ [7mkind version[27m[C[C[C[Ckind version
+[?2004lkind v0.29.0 go1.24.2 linux/arm64
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ [7mkind get clusters[27m[C[C[C[Ckind get clusters
+[?2004lNo kind clusters found.
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ [7mmake up[27m[C[C[C[Cmake up
+[?2004lmake build
+make[1]: Entering directory '/home/khalid/shubham/megaproject/github-actions-kubernetes-masterclass'
+docker build -t trainwithshubham/skillpulse-backend:latest  ./backend
+[1A[1B[0G[?25l
+[?25h[1A[0G[?25l[+] Building 0.0s (0/1)                                        docker:default
+[?25h[1A[0G[?25l[+] Building 0.1s (1/4)                                        docker:default
+[34m => [internal] load build definition from Dockerfile                     0.0s
+[0m[34m => => transferring dockerfile: 345B                                     0.0s
+[0m => [internal] load metadata for docker.io/library/alpine:3.23           0.1s
+ => [internal] load metadata for docker.io/library/golang:1.26-alpine    0.1s
+ => [auth] library/golang:pull token for registry-1.docker.io            0.0s
+[?25h[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.3s (3/5)                                        docker:default
+[34m => [internal] load build definition from Dockerfile                     0.0s
+[0m[34m => => transferring dockerfile: 345B                                     0.0s
+[0m => [internal] load metadata for docker.io/library/alpine:3.23           0.2s
+ => [internal] load metadata for docker.io/library/golang:1.26-alpine    0.2s
+[34m => [auth] library/golang:pull token for registry-1.docker.io            0.0s
+[0m[34m => [auth] library/alpine:pull token for registry-1.docker.io            0.0s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.4s (3/5)                                        docker:default
+[34m => [internal] load build definition from Dockerfile                     0.0s
+[0m[34m => => transferring dockerfile: 345B                                     0.0s
+[0m => [internal] load metadata for docker.io/library/alpine:3.23           0.4s
+ => [internal] load metadata for docker.io/library/golang:1.26-alpine    0.4s
+[34m => [auth] library/golang:pull token for registry-1.docker.io            0.0s
+[0m[34m => [auth] library/alpine:pull token for registry-1.docker.io            0.0s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.6s (3/5)                                        docker:default
+[34m => [internal] load build definition from Dockerfile                     0.0s
+[0m[34m => => transferring dockerfile: 345B                                     0.0s
+[0m => [internal] load metadata for docker.io/library/alpine:3.23           0.5s
+ => [internal] load metadata for docker.io/library/golang:1.26-alpine    0.5s
+[34m => [auth] library/golang:pull token for registry-1.docker.io            0.0s
+[0m[34m => [auth] library/alpine:pull token for registry-1.docker.io            0.0s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.6s (4/5)                                        docker:default
+[34m => [internal] load build definition from Dockerfile                     0.0s
+[0m[34m => => transferring dockerfile: 345B                                     0.0s
+[0m[34m => [internal] load metadata for docker.io/library/alpine:3.23           0.6s
+[0m => [internal] load metadata for docker.io/library/golang:1.26-alpine    0.6s
+[34m => [auth] library/golang:pull token for registry-1.docker.io            0.0s
+[0m[34m => [auth] library/alpine:pull token for registry-1.docker.io            0.0s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.7s (15/16)                                      docker:default
+[34m => [internal] load build definition from Dockerfile                     0.0s
+[0m[34m => => transferring dockerfile: 345B                                     0.0s
+[0m[34m => [internal] load metadata for docker.io/library/alpine:3.23           0.6s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.26-alpine    0.6s
+[0m[34m => [auth] library/golang:pull token for registry-1.docker.io            0.0s
+[0m[34m => [auth] library/alpine:pull token for registry-1.docker.io            0.0s
+[0m[34m => [internal] load .dockerignore                                        0.0s
+[0m[34m => => transferring context: 2B                                          0.0s
+[0m[34m => [builder 1/4] FROM docker.io/library/golang:1.26-alpine@sha256:91ed  0.0s
+[0m[34m => => resolve docker.io/library/golang:1.26-alpine@sha256:91eda9776261  0.0s
+[0m[34m => [internal] load build context                                        0.0s
+[0m[34m => => transferring context: 351B                                        0.0s
+[0m[34m => [stage-1 1/4] FROM docker.io/library/alpine:3.23@sha256:5b10f432ef3  0.0s
+[0m[34m => => resolve docker.io/library/alpine:3.23@sha256:5b10f432ef3da1b8d4c  0.0s
+[0m[34m => CACHED [stage-1 2/4] RUN apk --no-cache add ca-certificates          0.0s
+[0m[34m => CACHED [stage-1 3/4] WORKDIR /app                                    0.0s
+[0m[34m => CACHED [builder 2/4] WORKDIR /app                                    0.0s
+[0m[34m => CACHED [builder 3/4] COPY . .                                        0.0s
+[0m[34m => CACHED [builder 4/4] RUN go mod tidy && CGO_ENABLED=0 GOOS=linux go  0.0s
+[0m[34m => CACHED [stage-1 4/4] COPY --from=builder /app/skillpulse .           0.0s
+[0m => exporting to image                                                   0.0s
+[34m => => exporting layers                                                  0.0s
+[0m[34m => => exporting manifest sha256:fbb0c1c0021e86d5681e4a54c35c99ec91daad  0.0s
+[0m[34m => => exporting config sha256:8ed77dcd2cf5b1b55fbcc26e66f739e0fdc7baf4  0.0s
+[0m[34m => => exporting attestation manifest sha256:86f8ec1b4be344a53801033118  0.0s
+[0m => => exporting manifest list sha256:061d56fd42f4d99b1636ac8490c8d4a99  0.0s
+[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.8s (16/16) FINISHED                             docker:default
+[34m => [internal] load build definition from Dockerfile                     0.0s
+[0m[34m => => transferring dockerfile: 345B                                     0.0s
+[0m[34m => [internal] load metadata for docker.io/library/alpine:3.23           0.6s
+[0m[34m => [internal] load metadata for docker.io/library/golang:1.26-alpine    0.6s
+[0m[34m => [auth] library/golang:pull token for registry-1.docker.io            0.0s
+[0m[34m => [auth] library/alpine:pull token for registry-1.docker.io            0.0s
+[0m[34m => [internal] load .dockerignore                                        0.0s
+[0m[34m => => transferring context: 2B                                          0.0s
+[0m[34m => [builder 1/4] FROM docker.io/library/golang:1.26-alpine@sha256:91ed  0.0s
+[0m[34m => => resolve docker.io/library/golang:1.26-alpine@sha256:91eda9776261  0.0s
+[0m[34m => [internal] load build context                                        0.0s
+[0m[34m => => transferring context: 351B                                        0.0s
+[0m[34m => [stage-1 1/4] FROM docker.io/library/alpine:3.23@sha256:5b10f432ef3  0.0s
+[0m[34m => => resolve docker.io/library/alpine:3.23@sha256:5b10f432ef3da1b8d4c  0.0s
+[0m[34m => CACHED [stage-1 2/4] RUN apk --no-cache add ca-certificates          0.0s
+[0m[34m => CACHED [stage-1 3/4] WORKDIR /app                                    0.0s
+[0m[34m => CACHED [builder 2/4] WORKDIR /app                                    0.0s
+[0m[34m => CACHED [builder 3/4] COPY . .                                        0.0s
+[0m[34m => CACHED [builder 4/4] RUN go mod tidy && CGO_ENABLED=0 GOOS=linux go  0.0s
+[0m[34m => CACHED [stage-1 4/4] COPY --from=builder /app/skillpulse .           0.0s
+[0m[34m => exporting to image                                                   0.1s
+[0m[34m => => exporting layers                                                  0.0s
+[0m[34m => => exporting manifest sha256:fbb0c1c0021e86d5681e4a54c35c99ec91daad  0.0s
+[0m[34m => => exporting config sha256:8ed77dcd2cf5b1b55fbcc26e66f739e0fdc7baf4  0.0s
+[0m[34m => => exporting attestation manifest sha256:86f8ec1b4be344a53801033118  0.0s
+[0m[34m => => exporting manifest list sha256:061d56fd42f4d99b1636ac8490c8d4a99  0.0s
+[0m[34m => => naming to docker.io/trainwithshubham/skillpulse-backend:latest    0.0s
+[0m[34m => => unpacking to docker.io/trainwithshubham/skillpulse-backend:lates  0.0s
+[0m[?25hdocker build -t trainwithshubham/skillpulse-frontend:latest ./frontend
+[1A[1B[0G[?25l[+] Building 0.0s (1/1)                                        docker:default
+[34m => [internal] load build definition from Dockerfile                     0.0s
+[0m[?25h[1A[1A[0G[?25l[+] Building 0.2s (2/3)                                        docker:default
+[34m => [internal] load build definition from Dockerfile                     0.0s
+[0m[34m => => transferring dockerfile: 223B                                     0.0s
+[0m => [internal] load metadata for docker.io/library/nginx:alpine          0.2s
+[34m => [auth] library/nginx:pull token for registry-1.docker.io             0.0s
+[0m[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.4s (2/3)                                        docker:default
+[34m => [internal] load build definition from Dockerfile                     0.0s
+[0m[34m => => transferring dockerfile: 223B                                     0.0s
+[0m => [internal] load metadata for docker.io/library/nginx:alpine          0.4s
+[34m => [auth] library/nginx:pull token for registry-1.docker.io             0.0s
+[0m[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.5s (2/3)                                        docker:default
+[34m => [internal] load build definition from Dockerfile                     0.0s
+[0m[34m => => transferring dockerfile: 223B                                     0.0s
+[0m => [internal] load metadata for docker.io/library/nginx:alpine          0.5s
+[34m => [auth] library/nginx:pull token for registry-1.docker.io             0.0s
+[0m[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.5s (3/3)                                        docker:default
+[34m => [internal] load build definition from Dockerfile                     0.0s
+[0m[34m => => transferring dockerfile: 223B                                     0.0s
+[0m[34m => [internal] load metadata for docker.io/library/nginx:alpine          0.5s
+[0m[34m => [auth] library/nginx:pull token for registry-1.docker.io             0.0s
+[0m[?25h[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.6s (10/11)                                      docker:default
+[34m => [internal] load build definition from Dockerfile                     0.0s
+[0m[34m => => transferring dockerfile: 223B                                     0.0s
+[0m[34m => [internal] load metadata for docker.io/library/nginx:alpine          0.5s
+[0m[34m => [auth] library/nginx:pull token for registry-1.docker.io             0.0s
+[0m[34m => [internal] load .dockerignore                                        0.0s
+[0m[34m => => transferring context: 2B                                          0.0s
+[0m[34m => [1/5] FROM docker.io/library/nginx:alpine@sha256:dc48b7a872a79fb541  0.0s
+[0m[34m => => resolve docker.io/library/nginx:alpine@sha256:dc48b7a872a79fb541  0.0s
+[0m[34m => [internal] load build context                                        0.0s
+[0m[34m => => transferring context: 169B                                        0.0s
+[0m[34m => CACHED [2/5] COPY index.html /usr/share/nginx/html/                  0.0s
+[0m[34m => CACHED [3/5] COPY css /usr/share/nginx/html/css                      0.0s
+[0m[34m => CACHED [4/5] COPY js /usr/share/nginx/html/js                        0.0s
+[0m[34m => CACHED [5/5] COPY nginx.conf /etc/nginx/conf.d/default.conf          0.0s
+[0m => exporting to image                                                   0.0s
+[34m => => exporting layers                                                  0.0s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.8s (11/11)                                      docker:default
+[34m => [internal] load build definition from Dockerfile                     0.0s
+[0m[34m => => transferring dockerfile: 223B                                     0.0s
+[0m[34m => [internal] load metadata for docker.io/library/nginx:alpine          0.5s
+[0m[34m => [auth] library/nginx:pull token for registry-1.docker.io             0.0s
+[0m[34m => [internal] load .dockerignore                                        0.0s
+[0m[34m => => transferring context: 2B                                          0.0s
+[0m[34m => [1/5] FROM docker.io/library/nginx:alpine@sha256:dc48b7a872a79fb541  0.0s
+[0m[34m => => resolve docker.io/library/nginx:alpine@sha256:dc48b7a872a79fb541  0.0s
+[0m[34m => [internal] load build context                                        0.0s
+[0m[34m => => transferring context: 169B                                        0.0s
+[0m[34m => CACHED [2/5] COPY index.html /usr/share/nginx/html/                  0.0s
+[0m[34m => CACHED [3/5] COPY css /usr/share/nginx/html/css                      0.0s
+[0m[34m => CACHED [4/5] COPY js /usr/share/nginx/html/js                        0.0s
+[0m[34m => CACHED [5/5] COPY nginx.conf /etc/nginx/conf.d/default.conf          0.0s
+[0m[34m => exporting to image                                                   0.1s
+[0m[34m => => exporting layers                                                  0.0s
+[0m[34m => => exporting manifest sha256:546a85d6d4454fd47e8a6966d9ec667cefc3f8  0.0s
+[0m[34m => => exporting config sha256:b662fc3e7be6e1248840ce7fba58a52cfc60af7a  0.0s
+[0m[34m => => exporting attestation manifest sha256:4c947e53506c96e4d83ed35842  0.0s
+[0m[34m => => exporting manifest list sha256:31f21bc2a1e3c6f526c5e665102ca6b41  0.0s
+[0m[34m => => naming to docker.io/trainwithshubham/skillpulse-frontend:latest   0.0s
+[0m[34m => => unpacking to docker.io/trainwithshubham/skillpulse-frontend:late  0.0s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.8s (11/11) FINISHED                             docker:default
+[34m => [internal] load build definition from Dockerfile                     0.0s
+[0m[34m => => transferring dockerfile: 223B                                     0.0s
+[0m[34m => [internal] load metadata for docker.io/library/nginx:alpine          0.5s
+[0m[34m => [auth] library/nginx:pull token for registry-1.docker.io             0.0s
+[0m[34m => [internal] load .dockerignore                                        0.0s
+[0m[34m => => transferring context: 2B                                          0.0s
+[0m[34m => [1/5] FROM docker.io/library/nginx:alpine@sha256:dc48b7a872a79fb541  0.0s
+[0m[34m => => resolve docker.io/library/nginx:alpine@sha256:dc48b7a872a79fb541  0.0s
+[0m[34m => [internal] load build context                                        0.0s
+[0m[34m => => transferring context: 169B                                        0.0s
+[0m[34m => CACHED [2/5] COPY index.html /usr/share/nginx/html/                  0.0s
+[0m[34m => CACHED [3/5] COPY css /usr/share/nginx/html/css                      0.0s
+[0m[34m => CACHED [4/5] COPY js /usr/share/nginx/html/js                        0.0s
+[0m[34m => CACHED [5/5] COPY nginx.conf /etc/nginx/conf.d/default.conf          0.0s
+[0m[34m => exporting to image                                                   0.1s
+[0m[34m => => exporting layers                                                  0.0s
+[0m[34m => => exporting manifest sha256:546a85d6d4454fd47e8a6966d9ec667cefc3f8  0.0s
+[0m[34m => => exporting config sha256:b662fc3e7be6e1248840ce7fba58a52cfc60af7a  0.0s
+[0m[34m => => exporting attestation manifest sha256:4c947e53506c96e4d83ed35842  0.0s
+[0m[34m => => exporting manifest list sha256:31f21bc2a1e3c6f526c5e665102ca6b41  0.0s
+[0m[34m => => naming to docker.io/trainwithshubham/skillpulse-frontend:latest   0.0s
+[0m[34m => => unpacking to docker.io/trainwithshubham/skillpulse-frontend:late  0.0s
+[0m[?25hmake[1]: Leaving directory '/home/khalid/shubham/megaproject/github-actions-kubernetes-masterclass'
+kind create cluster --config k8s/kind-config.yaml --name skillpulse
+Creating cluster "skillpulse" ...
+[?7l⠈⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠑ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢀⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢄⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢄⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢆⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡰ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡠ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡀ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠎⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠊⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠑ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢀⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢄⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢄⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢆⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡰ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡠ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡀ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠎⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠊⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠑ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢀⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢄⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢄⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢆⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡰ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡠ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡀ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠎⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠊⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠑ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢀⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢄⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢄⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢆⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡰ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡠ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡀ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠎⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠊⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠑ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢀⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢄⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢄⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢆⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡰ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡠ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡀ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠎⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠊⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠑ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢀⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢄⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢄⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢆⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡰ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡠ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡀ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠎⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠊⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠑ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢀⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢄⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢄⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢆⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡰ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡠ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡀ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠎⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠊⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠑ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢀⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢄⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢄⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢆⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡰ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡠ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡀ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠎⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠊⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠑ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢀⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢄⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢄⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢆⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡰ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡠ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡀ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠎⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠊⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠑ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢀⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢄⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢄⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢆⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡰ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡠ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡀ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠎⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠊⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠑ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢀⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢄⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢄⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢆⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡰ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡠ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⡀ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢎⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠎⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠊⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠁ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠑ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⠱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⠈⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢀⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢄⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h[?7l⢄⡱ Ensuring node image (kindest/node:v1.35.1) 🖼 [?7h [32m✓[0m Ensuring node image (kindest/node:v1.35.1) 🖼
+[?7l⠈⠁ Preparing nodes 📦 📦 📦  [?7h[?7l⠈⠑ Preparing nodes 📦 📦 📦  [?7h[?7l⠈⠱ Preparing nodes 📦 📦 📦  [?7h[?7l⠈⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢀⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢄⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢄⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢆⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢎⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢎⡰ Preparing nodes 📦 📦 📦  [?7h[?7l⢎⡠ Preparing nodes 📦 📦 📦  [?7h[?7l⢎⡀ Preparing nodes 📦 📦 📦  [?7h[?7l⢎⠁ Preparing nodes 📦 📦 📦  [?7h[?7l⠎⠁ Preparing nodes 📦 📦 📦  [?7h[?7l⠊⠁ Preparing nodes 📦 📦 📦  [?7h[?7l⠈⠁ Preparing nodes 📦 📦 📦  [?7h[?7l⠈⠑ Preparing nodes 📦 📦 📦  [?7h[?7l⠈⠱ Preparing nodes 📦 📦 📦  [?7h[?7l⠈⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢀⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢄⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢄⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢆⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢎⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢎⡰ Preparing nodes 📦 📦 📦  [?7h[?7l⢎⡠ Preparing nodes 📦 📦 📦  [?7h[?7l⢎⡀ Preparing nodes 📦 📦 📦  [?7h[?7l⢎⠁ Preparing nodes 📦 📦 📦  [?7h[?7l⠎⠁ Preparing nodes 📦 📦 📦  [?7h[?7l⠊⠁ Preparing nodes 📦 📦 📦  [?7h[?7l⠈⠁ Preparing nodes 📦 📦 📦  [?7h[?7l⠈⠑ Preparing nodes 📦 📦 📦  [?7h[?7l⠈⠱ Preparing nodes 📦 📦 📦  [?7h[?7l⠈⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢀⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢄⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢄⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢆⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢎⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢎⡰ Preparing nodes 📦 📦 📦  [?7h[?7l⢎⡠ Preparing nodes 📦 📦 📦  [?7h[?7l⢎⡀ Preparing nodes 📦 📦 📦  [?7h[?7l⢎⠁ Preparing nodes 📦 📦 📦  [?7h[?7l⠎⠁ Preparing nodes 📦 📦 📦  [?7h[?7l⠊⠁ Preparing nodes 📦 📦 📦  [?7h[?7l⠈⠁ Preparing nodes 📦 📦 📦  [?7h[?7l⠈⠑ Preparing nodes 📦 📦 📦  [?7h[?7l⠈⠱ Preparing nodes 📦 📦 📦  [?7h[?7l⠈⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢀⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢄⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢄⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢆⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢎⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢎⡰ Preparing nodes 📦 📦 📦  [?7h[?7l⢎⡠ Preparing nodes 📦 📦 📦  [?7h[?7l⢎⡀ Preparing nodes 📦 📦 📦  [?7h[?7l⢎⠁ Preparing nodes 📦 📦 📦  [?7h[?7l⠎⠁ Preparing nodes 📦 📦 📦  [?7h[?7l⠊⠁ Preparing nodes 📦 📦 📦  [?7h[?7l⠈⠁ Preparing nodes 📦 📦 📦  [?7h[?7l⠈⠑ Preparing nodes 📦 📦 📦  [?7h[?7l⠈⠱ Preparing nodes 📦 📦 📦  [?7h[?7l⠈⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢀⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢄⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢄⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢆⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢎⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢎⡰ Preparing nodes 📦 📦 📦  [?7h[?7l⢎⡠ Preparing nodes 📦 📦 📦  [?7h[?7l⢎⡀ Preparing nodes 📦 📦 📦  [?7h[?7l⢎⠁ Preparing nodes 📦 📦 📦  [?7h[?7l⠎⠁ Preparing nodes 📦 📦 📦  [?7h[?7l⠊⠁ Preparing nodes 📦 📦 📦  [?7h[?7l⠈⠁ Preparing nodes 📦 📦 📦  [?7h[?7l⠈⠑ Preparing nodes 📦 📦 📦  [?7h[?7l⠈⠱ Preparing nodes 📦 📦 📦  [?7h[?7l⠈⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢀⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢄⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢄⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢆⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢎⡱ Preparing nodes 📦 📦 📦  [?7h[?7l⢎⡰ Preparing nodes 📦 📦 📦  [?7h[?7l⢎⡠ Preparing nodes 📦 📦 📦  [?7h[?7l⢎⡀ Preparing nodes 📦 📦 📦  [?7h[?7l⢎⠁ Preparing nodes 📦 📦 📦  [?7h[?7l⠎⠁ Preparing nodes 📦 📦 📦  [?7h[?7l⠊⠁ Preparing nodes 📦 📦 📦  [?7h[?7l⠈⠁ Preparing nodes 📦 📦 📦  [?7h[?7l⠈⠑ Preparing nodes 📦 📦 📦  [?7h [32m✓[0m Preparing nodes 📦 📦 📦 
+[?7l⠈⠁ Writing configuration 📜 [?7h[?7l⠈⠑ Writing configuration 📜 [?7h[?7l⠈⠱ Writing configuration 📜 [?7h[?7l⠈⡱ Writing configuration 📜 [?7h[?7l⢀⡱ Writing configuration 📜 [?7h[?7l⢄⡱ Writing configuration 📜 [?7h [32m✓[0m Writing configuration 📜
+[?7l⠈⠁ Starting control-plane 🕹️ [?7h[?7l⠈⠑ Starting control-plane 🕹️ [?7h[?7l⠈⠱ Starting control-plane 🕹️ [?7h[?7l⠈⡱ Starting control-plane 🕹️ [?7h[?7l⢀⡱ Starting control-plane 🕹️ [?7h[?7l⢄⡱ Starting control-plane 🕹️ [?7h[?7l⢄⡱ Starting control-plane 🕹️ [?7h[?7l⢆⡱ Starting control-plane 🕹️ [?7h[?7l⢎⡱ Starting control-plane 🕹️ [?7h[?7l⢎⡰ Starting control-plane 🕹️ [?7h[?7l⢎⡠ Starting control-plane 🕹️ [?7h[?7l⢎⡀ Starting control-plane 🕹️ [?7h[?7l⢎⠁ Starting control-plane 🕹️ [?7h[?7l⠎⠁ Starting control-plane 🕹️ [?7h[?7l⠊⠁ Starting control-plane 🕹️ [?7h[?7l⠈⠁ Starting control-plane 🕹️ [?7h[?7l⠈⠑ Starting control-plane 🕹️ [?7h[?7l⠈⠱ Starting control-plane 🕹️ [?7h[?7l⠈⡱ Starting control-plane 🕹️ [?7h[?7l⢀⡱ Starting control-plane 🕹️ [?7h[?7l⢄⡱ Starting control-plane 🕹️ [?7h[?7l⢄⡱ Starting control-plane 🕹️ [?7h[?7l⢆⡱ Starting control-plane 🕹️ [?7h[?7l⢎⡱ Starting control-plane 🕹️ [?7h[?7l⢎⡰ Starting control-plane 🕹️ [?7h[?7l⢎⡠ Starting control-plane 🕹️ [?7h[?7l⢎⡀ Starting control-plane 🕹️ [?7h[?7l⢎⠁ Starting control-plane 🕹️ [?7h[?7l⠎⠁ Starting control-plane 🕹️ [?7h[?7l⠊⠁ Starting control-plane 🕹️ [?7h[?7l⠈⠁ Starting control-plane 🕹️ [?7h[?7l⠈⠑ Starting control-plane 🕹️ [?7h[?7l⠈⠱ Starting control-plane 🕹️ [?7h[?7l⠈⡱ Starting control-plane 🕹️ [?7h[?7l⢀⡱ Starting control-plane 🕹️ [?7h[?7l⢄⡱ Starting control-plane 🕹️ [?7h[?7l⢄⡱ Starting control-plane 🕹️ [?7h[?7l⢆⡱ Starting control-plane 🕹️ [?7h[?7l⢎⡱ Starting control-plane 🕹️ [?7h[?7l⢎⡰ Starting control-plane 🕹️ [?7h[?7l⢎⡠ Starting control-plane 🕹️ [?7h[?7l⢎⡀ Starting control-plane 🕹️ [?7h[?7l⢎⠁ Starting control-plane 🕹️ [?7h[?7l⠎⠁ Starting control-plane 🕹️ [?7h[?7l⠊⠁ Starting control-plane 🕹️ [?7h[?7l⠈⠁ Starting control-plane 🕹️ [?7h[?7l⠈⠑ Starting control-plane 🕹️ [?7h[?7l⠈⠱ Starting control-plane 🕹️ [?7h[?7l⠈⡱ Starting control-plane 🕹️ [?7h[?7l⢀⡱ Starting control-plane 🕹️ [?7h[?7l⢄⡱ Starting control-plane 🕹️ [?7h[?7l⢄⡱ Starting control-plane 🕹️ [?7h[?7l⢆⡱ Starting control-plane 🕹️ [?7h[?7l⢎⡱ Starting control-plane 🕹️ [?7h[?7l⢎⡰ Starting control-plane 🕹️ [?7h[?7l⢎⡠ Starting control-plane 🕹️ [?7h[?7l⢎⡀ Starting control-plane 🕹️ [?7h[?7l⢎⠁ Starting control-plane 🕹️ [?7h[?7l⠎⠁ Starting control-plane 🕹️ [?7h[?7l⠊⠁ Starting control-plane 🕹️ [?7h[?7l⠈⠁ Starting control-plane 🕹️ [?7h[?7l⠈⠑ Starting control-plane 🕹️ [?7h[?7l⠈⠱ Starting control-plane 🕹️ [?7h[?7l⠈⡱ Starting control-plane 🕹️ [?7h[?7l⢀⡱ Starting control-plane 🕹️ [?7h[?7l⢄⡱ Starting control-plane 🕹️ [?7h[?7l⢄⡱ Starting control-plane 🕹️ [?7h[?7l⢆⡱ Starting control-plane 🕹️ [?7h[?7l⢎⡱ Starting control-plane 🕹️ [?7h[?7l⢎⡰ Starting control-plane 🕹️ [?7h[?7l⢎⡠ Starting control-plane 🕹️ [?7h[?7l⢎⡀ Starting control-plane 🕹️ [?7h[?7l⢎⠁ Starting control-plane 🕹️ [?7h[?7l⠎⠁ Starting control-plane 🕹️ [?7h[?7l⠊⠁ Starting control-plane 🕹️ [?7h[?7l⠈⠁ Starting control-plane 🕹️ [?7h[?7l⠈⠑ Starting control-plane 🕹️ [?7h[?7l⠈⠱ Starting control-plane 🕹️ [?7h[?7l⠈⡱ Starting control-plane 🕹️ [?7h[?7l⢀⡱ Starting control-plane 🕹️ [?7h[?7l⢄⡱ Starting control-plane 🕹️ [?7h[?7l⢄⡱ Starting control-plane 🕹️ [?7h[?7l⢆⡱ Starting control-plane 🕹️ [?7h[?7l⢎⡱ Starting control-plane 🕹️ [?7h[?7l⢎⡰ Starting control-plane 🕹️ [?7h[?7l⢎⡠ Starting control-plane 🕹️ [?7h[?7l⢎⡀ Starting control-plane 🕹️ [?7h[?7l⢎⠁ Starting control-plane 🕹️ [?7h[?7l⠎⠁ Starting control-plane 🕹️ [?7h[?7l⠊⠁ Starting control-plane 🕹️ [?7h[?7l⠈⠁ Starting control-plane 🕹️ [?7h[?7l⠈⠑ Starting control-plane 🕹️ [?7h [32m✓[0m Starting control-plane 🕹️
+[?7l⠈⠁ Installing CNI 🔌 [?7h[?7l⠈⠑ Installing CNI 🔌 [?7h[?7l⠈⠱ Installing CNI 🔌 [?7h[?7l⠈⡱ Installing CNI 🔌 [?7h[?7l⢀⡱ Installing CNI 🔌 [?7h[?7l⢄⡱ Installing CNI 🔌 [?7h[?7l⢄⡱ Installing CNI 🔌 [?7h [32m✓[0m Installing CNI 🔌
+[?7l⠈⠁ Installing StorageClass 💾 [?7h[?7l⠈⠑ Installing StorageClass 💾 [?7h[?7l⠈⠱ Installing StorageClass 💾 [?7h[?7l⠈⡱ Installing StorageClass 💾 [?7h[?7l⢀⡱ Installing StorageClass 💾 [?7h[?7l⢄⡱ Installing StorageClass 💾 [?7h [32m✓[0m Installing StorageClass 💾
+[?7l⠈⠁ Joining worker nodes 🚜 [?7h[?7l⠈⠑ Joining worker nodes 🚜 [?7h[?7l⠈⠱ Joining worker nodes 🚜 [?7h[?7l⠈⡱ Joining worker nodes 🚜 [?7h[?7l⢀⡱ Joining worker nodes 🚜 [?7h[?7l⢄⡱ Joining worker nodes 🚜 [?7h[?7l⢄⡱ Joining worker nodes 🚜 [?7h[?7l⢆⡱ Joining worker nodes 🚜 [?7h[?7l⢎⡱ Joining worker nodes 🚜 [?7h[?7l⢎⡰ Joining worker nodes 🚜 [?7h[?7l⢎⡠ Joining worker nodes 🚜 [?7h[?7l⢎⡀ Joining worker nodes 🚜 [?7h[?7l⢎⠁ Joining worker nodes 🚜 [?7h[?7l⠎⠁ Joining worker nodes 🚜 [?7h[?7l⠊⠁ Joining worker nodes 🚜 [?7h[?7l⠈⠁ Joining worker nodes 🚜 [?7h[?7l⠈⠑ Joining worker nodes 🚜 [?7h[?7l⠈⠱ Joining worker nodes 🚜 [?7h[?7l⠈⡱ Joining worker nodes 🚜 [?7h[?7l⢀⡱ Joining worker nodes 🚜 [?7h[?7l⢄⡱ Joining worker nodes 🚜 [?7h[?7l⢄⡱ Joining worker nodes 🚜 [?7h[?7l⢆⡱ Joining worker nodes 🚜 [?7h[?7l⢎⡱ Joining worker nodes 🚜 [?7h[?7l⢎⡰ Joining worker nodes 🚜 [?7h[?7l⢎⡠ Joining worker nodes 🚜 [?7h[?7l⢎⡀ Joining worker nodes 🚜 [?7h[?7l⢎⠁ Joining worker nodes 🚜 [?7h[?7l⠎⠁ Joining worker nodes 🚜 [?7h[?7l⠊⠁ Joining worker nodes 🚜 [?7h[?7l⠈⠁ Joining worker nodes 🚜 [?7h[?7l⠈⠑ Joining worker nodes 🚜 [?7h[?7l⠈⠱ Joining worker nodes 🚜 [?7h[?7l⠈⡱ Joining worker nodes 🚜 [?7h[?7l⢀⡱ Joining worker nodes 🚜 [?7h[?7l⢄⡱ Joining worker nodes 🚜 [?7h[?7l⢄⡱ Joining worker nodes 🚜 [?7h[?7l⢆⡱ Joining worker nodes 🚜 [?7h[?7l⢎⡱ Joining worker nodes 🚜 [?7h[?7l⢎⡰ Joining worker nodes 🚜 [?7h[?7l⢎⡠ Joining worker nodes 🚜 [?7h[?7l⢎⡀ Joining worker nodes 🚜 [?7h[?7l⢎⠁ Joining worker nodes 🚜 [?7h[?7l⠎⠁ Joining worker nodes 🚜 [?7h[?7l⠊⠁ Joining worker nodes 🚜 [?7h[?7l⠈⠁ Joining worker nodes 🚜 [?7h[?7l⠈⠑ Joining worker nodes 🚜 [?7h[?7l⠈⠱ Joining worker nodes 🚜 [?7h[?7l⠈⡱ Joining worker nodes 🚜 [?7h[?7l⢀⡱ Joining worker nodes 🚜 [?7h[?7l⢄⡱ Joining worker nodes 🚜 [?7h[?7l⢄⡱ Joining worker nodes 🚜 [?7h[?7l⢆⡱ Joining worker nodes 🚜 [?7h[?7l⢎⡱ Joining worker nodes 🚜 [?7h[?7l⢎⡰ Joining worker nodes 🚜 [?7h[?7l⢎⡠ Joining worker nodes 🚜 [?7h[?7l⢎⡀ Joining worker nodes 🚜 [?7h[?7l⢎⠁ Joining worker nodes 🚜 [?7h[?7l⠎⠁ Joining worker nodes 🚜 [?7h[?7l⠊⠁ Joining worker nodes 🚜 [?7h [32m✓[0m Joining worker nodes 🚜
+Set kubectl context to "kind-skillpulse"
+You can now use your cluster with:
+
+kubectl cluster-info --context kind-skillpulse
+
+Not sure what to do next? 😅  Check out https://kind.sigs.k8s.io/docs/user/quick-start/
+make load
+make[1]: Entering directory '/home/khalid/shubham/megaproject/github-actions-kubernetes-masterclass'
+kind load docker-image trainwithshubham/skillpulse-backend:latest  --name skillpulse
+Image: "trainwithshubham/skillpulse-backend:latest" with ID "sha256:061d56fd42f4d99b1636ac8490c8d4a99cd6116b27b644b3cd6f5f0462c6e8af" not yet present on node "skillpulse-worker2", loading...
+Image: "trainwithshubham/skillpulse-backend:latest" with ID "sha256:061d56fd42f4d99b1636ac8490c8d4a99cd6116b27b644b3cd6f5f0462c6e8af" not yet present on node "skillpulse-worker", loading...
+Image: "trainwithshubham/skillpulse-backend:latest" with ID "sha256:061d56fd42f4d99b1636ac8490c8d4a99cd6116b27b644b3cd6f5f0462c6e8af" not yet present on node "skillpulse-control-plane", loading...
+kind load docker-image trainwithshubham/skillpulse-frontend:latest --name skillpulse
+Image: "trainwithshubham/skillpulse-frontend:latest" with ID "sha256:31f21bc2a1e3c6f526c5e665102ca6b41ed6f4a495929c2b6fdd035a91f5e88d" not yet present on node "skillpulse-worker2", loading...
+Image: "trainwithshubham/skillpulse-frontend:latest" with ID "sha256:31f21bc2a1e3c6f526c5e665102ca6b41ed6f4a495929c2b6fdd035a91f5e88d" not yet present on node "skillpulse-worker", loading...
+Image: "trainwithshubham/skillpulse-frontend:latest" with ID "sha256:31f21bc2a1e3c6f526c5e665102ca6b41ed6f4a495929c2b6fdd035a91f5e88d" not yet present on node "skillpulse-control-plane", loading...
+make[1]: Leaving directory '/home/khalid/shubham/megaproject/github-actions-kubernetes-masterclass'
+make apply
+make[1]: Entering directory '/home/khalid/shubham/megaproject/github-actions-kubernetes-masterclass'
+kubectl apply -f k8s/00-namespace.yaml \
+              -f k8s/10-mysql.yaml \
+              -f k8s/20-backend.yaml \
+              -f k8s/30-frontend.yaml
+namespace/skillpulse created
+secret/skillpulse-db created
+configmap/mysql-init created
+service/mysql created
+statefulset.apps/mysql created
+service/backend created
+deployment.apps/backend created
+service/frontend created
+deployment.apps/frontend created
+kubectl rollout status statefulset/mysql    -n skillpulse --timeout=180s
+Waiting for 1 pods to be ready...
+partitioned roll out complete: 1 new pods have been updated...
+kubectl rollout status deployment/backend   -n skillpulse --timeout=120s
+Waiting for deployment "backend" rollout to finish: 0 of 1 updated replicas are available...
+deployment "backend" successfully rolled out
+kubectl rollout status deployment/frontend  -n skillpulse --timeout=60s
+deployment "frontend" successfully rolled out
+make[1]: Leaving directory '/home/khalid/shubham/megaproject/github-actions-kubernetes-masterclass'
+
+  SkillPulse is live at http://localhost:8888
+
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ [7mkubectl get nodes[27m
+[7mkubectl get pods -n skillpulse[27m
+[7mkubectl get svc -n skillpulse[27m
+[7mcurl http://localhost:8888/health[27m[A[A[A[C[C[C[Ckubectl get nodes
+kubectl get pods -n skillpulse
+kubectl get svc -n skillpulse
+curl http://localhost:8888/health[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004lNAME                       STATUS   ROLES           AGE     VERSION
+skillpulse-control-plane   Ready    control-plane   2m39s   v1.35.1
+skillpulse-worker          Ready    <none>          2m24s   v1.35.1
+skillpulse-worker2         Ready    <none>          2m24s   v1.35.1
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ [7mkubectl get pods -n skillpulse[27m[C[C[C[Ckubectl get pods -n skillpulse
+[?2004lNAME                        READY   STATUS    RESTARTS   AGE
+backend-fb779cd7c-dbkjl     1/1     Running   0          2m25s
+frontend-76b7d9db7c-d9l5h   1/1     Running   0          2m25s
+mysql-0                     1/1     Running   0          2m26s
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ [7mkubectl get svc -n skillpulse[27m[C[C[C[Ckubectl get svc -n skillpulse
+[?2004lNAME       TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
+backend    ClusterIP   10.96.64.0     <none>        8080/TCP       2m33s
+frontend   NodePort    10.96.96.218   <none>        80:30080/TCP   2m32s
+mysql      ClusterIP   None           <none>        3306/TCP       2m33s
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ [7mcurl http://localhost:8888/health[27m[C[C[C[Ccurl http://localhost:8888/health
+[?2004l{"status":"healthy"}[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ [7mgit status[27m[C[C[C[Cgit status
+[?2004lOn branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mmega.txt[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ can [K[K[K[Kexplorer.exe .
+[?2004l[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ ls -l
+[?2004ltotal 108
+-rw-r--r-- 1 khalid khalid  2035 May 16 23:53 Makefile
+-rw-r--r-- 1 khalid khalid 20470 May 16 23:53 README.md
+drwxr-xr-x 5 khalid khalid  4096 May 16 23:53 [0m[01;34mbackend[0m
+-rw-r--r-- 1 khalid khalid  1209 May 16 23:53 docker-compose.yml
+drwxr-xr-x 2 khalid khalid  4096 May 16 23:53 [01;34mdocs[0m
+drwxr-xr-x 4 khalid khalid  4096 May 16 23:53 [01;34mfrontend[0m
+drwxr-xr-x 2 khalid khalid  4096 May 16 23:53 [01;34mk8s[0m
+drwxr-xr-x 4 khalid khalid  4096 May 17 02:14 [01;34mmega-project[0m
+-rw-r--r-- 1 khalid khalid 49152 May 17 01:16 mega.txt
+drwxr-xr-x 2 khalid khalid  4096 May 16 23:53 [01;34mmysql[0m
+-rw-r--r-- 1 khalid khalid    22 May 17 00:34 test.md
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ cd mega-project/
+[?2004l[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass/mega-project[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass/mega-project[00m$ ls -l
+[?2004ltotal 44
+-rw-r--r-- 1 khalid khalid 17009 May 17 02:10 day-72-mega-project-mcqs.html
+-rw-r--r-- 1 khalid khalid    25 May 17 02:14 day-72-mega-project-mcqs.html:Zone.Identifier
+-rw-r--r-- 1 khalid khalid  4837 May 17 01:28 github-actions-kubernetes-masterclass-documentation.md
+-rw-r--r-- 1 khalid khalid    25 May 17 02:14 github-actions-kubernetes-masterclass-documentation.md:Zone.Identifier
+drwxr-xr-x 2 khalid khalid  4096 May 17 00:02 [0m[01;34mmd[0m
+drwxr-xr-x 2 khalid khalid  4096 May 17 02:14 [01;34mscreenshots[0m
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass/mega-project[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass/mega-project[00m$ rm *.[7mIdentifier[27mIdentifier
+[?2004l[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass/mega-project[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass/mega-project[00m$ rm *.Identifier[10Pls -l
+[?2004ltotal 36
+-rw-r--r-- 1 khalid khalid 17009 May 17 02:10 day-72-mega-project-mcqs.html
+-rw-r--r-- 1 khalid khalid  4837 May 17 01:28 github-actions-kubernetes-masterclass-documentation.md
+drwxr-xr-x 2 khalid khalid  4096 May 17 00:02 [0m[01;34mmd[0m
+drwxr-xr-x 2 khalid khalid  4096 May 17 02:14 [01;34mscreenshots[0m
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass/mega-project[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass/mega-project[00m$ rm[K[Kcd ..
+[?2004l[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ ls -l
+[?2004ltotal 108
+-rw-r--r-- 1 khalid khalid  2035 May 16 23:53 Makefile
+-rw-r--r-- 1 khalid khalid 20470 May 16 23:53 README.md
+drwxr-xr-x 5 khalid khalid  4096 May 16 23:53 [0m[01;34mbackend[0m
+-rw-r--r-- 1 khalid khalid  1209 May 16 23:53 docker-compose.yml
+drwxr-xr-x 2 khalid khalid  4096 May 16 23:53 [01;34mdocs[0m
+drwxr-xr-x 4 khalid khalid  4096 May 16 23:53 [01;34mfrontend[0m
+drwxr-xr-x 2 khalid khalid  4096 May 16 23:53 [01;34mk8s[0m
+drwxr-xr-x 4 khalid khalid  4096 May 17 02:15 [01;34mmega-project[0m
+-rw-r--r-- 1 khalid khalid 49152 May 17 01:16 mega.txt
+drwxr-xr-x 2 khalid khalid  4096 May 16 23:53 [01;34mmysql[0m
+-rw-r--r-- 1 khalid khalid    22 May 17 00:34 test.md
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ git status
+[?2004lOn branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mmega-project/[m
+	[31mmega.txt[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ git add .
+[?2004l[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ git commit -m ""M"e"g"a"-"P"r"o"j"e"c"t" "s"u"b"m"i"s"s"i"o"n"
+[?2004l[main 414a3ad] Mega-Project submission
+ 7 files changed, 996 insertions(+)
+ create mode 100644 mega-project/day-72-mega-project-mcqs.html
+ create mode 100644 mega-project/github-actions-kubernetes-masterclass-documentation.md
+ create mode 100644 mega-project/screenshots/Docker-CICD.png
+ create mode 100644 mega-project/screenshots/git-actions-a.png
+ create mode 100644 mega-project/screenshots/kind.png
+ create mode 100644 mega-project/screenshots/localhost.png
+ create mode 100644 mega.txt
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ git push
+[?2004lEnumerating objects: 12, done.
+Counting objects:   8% (1/12)Counting objects:  16% (2/12)Counting objects:  25% (3/12)Counting objects:  33% (4/12)Counting objects:  41% (5/12)Counting objects:  50% (6/12)Counting objects:  58% (7/12)Counting objects:  66% (8/12)Counting objects:  75% (9/12)Counting objects:  83% (10/12)Counting objects:  91% (11/12)Counting objects: 100% (12/12)Counting objects: 100% (12/12), done.
+Delta compression using up to 12 threads
+Compressing objects:   9% (1/11)Compressing objects:  18% (2/11)Compressing objects:  27% (3/11)Compressing objects:  36% (4/11)Compressing objects:  45% (5/11)Compressing objects:  54% (6/11)Compressing objects:  63% (7/11)Compressing objects:  72% (8/11)Compressing objects:  81% (9/11)Compressing objects:  90% (10/11)Compressing objects: 100% (11/11)Compressing objects: 100% (11/11), done.
+Writing objects:   9% (1/11)Writing objects:  18% (2/11)Writing objects:  27% (3/11)Writing objects:  36% (4/11)Writing objects:  45% (5/11)Writing objects:  54% (6/11)Writing objects:  63% (7/11)Writing objects:  72% (8/11)Writing objects:  81% (9/11)Writing objects:  90% (10/11)Writing objects: 100% (11/11)Writing objects: 100% (11/11), 742.22 KiB | 20.06 MiB/s, done.
+Total 11 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1)[Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+To github.com:krmaryum/github-actions-kubernetes-masterclass.git
+   5a514ce..414a3ad  main -> main
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ [7mkind delete cluster --name skillpulse[27m[C[C[C[Ckind delete cluster --name skillpulse
+[?2004lDeleting cluster "skillpulse" ...
+Deleted nodes: ["skillpulse-worker2" "skillpulse-worker" "skillpulse-control-plane"]
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ [7mdocker compose down -v[27m[C[C[C[Cdocker compose down -v
+[?2004l[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ [7mdocker system prune -f[27m[C[C[C[Cdocker system prune -f
+[?2004lDeleted Networks:
+task-3_task-manager-network
+kind
+
+Deleted build cache objects:
+3f0owuq8lifh06bmvcxk6hysk
+xa8sac5wbd2bqm856azze3bak
+squzbrp4kd85vmkho3eb0c7zi
+xwpqzeyx3zvag8qosji7ut6yd
+a6cj1zmcyu9z5sp0uox4vwadr
+th02s7ib6ik2tt5h9dc1he8g4
+ouvq6ugbl9faj32khzx7a4reg
+wv62zja1y0mxh3549ec8irlwc
+8buh2wq2qn4dnl7zg9kuxbef0
+legb0rhp94q1v6qq8lgm0ogff
+ybst1dh5ecxc6l244jf4p1p2g
+jbxetwixs092am1wal40yfnip
+co0lg3i6sfqtal214jwljzp6d
+c5sq2nc6i5148s0s5loo0khzn
+w1hfa7zeajjdl42qh2uz0otzn
+zc8h9fjq0za0n2ts619bzvf2v
+w4gwf8gm8d0wqxogmmt6xbfpy
+j13l0nyc8umqovpzwx1qwzik3
+8pq9ow6s6eg88rsll80spcile
+w9ey55yg1gforl0n59yb94wps
+7t7g0g7aij0p9w8jmrkgf853h
+z0p84h7ppahx05r2b9vza6aqu
+yhxad2m3i03d4sgr54odhnjce
+vdxerw1f68532piiuld36npu6
+v4uhfpwas542wrmutkyktkn71
+usrceufhdjjrfvz55l7yyj8oe
+6s48ylyhq831ct1jw0wqpvuqn
+hjjmp13a1hits0ckni0sgzrce
+5za3finmw8vju32coy1yirdp8
+0wyjr7z655725m23wssqokr6k
+1qwhkycxofh9zaf4z41f0dvou
+ycyj2b296z6xd5equn749s9ma
+0guvondvaqvra5k9goxgfqtjw
+mkwi4a7pgpqrfnbrsk4pjovuk
+
+Total reclaimed space: 968.5MB
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ [7mgit status[27m[C[C[C[Cgit status
+[?2004lOn branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   mega.txt[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ [7mkind get clusters[27m[C[C[C[Ckind get clusters
+[?2004lNo kind clusters found.
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ [7mkubectl get nodes[27m[C[C[C[Ckubectl get nodes
+[?2004lE0517 02:24:55.809616   31377 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0517 02:24:55.819798   31377 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0517 02:24:55.821934   31377 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0517 02:24:55.823205   31377 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0517 02:24:55.824253   31377 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ [7mdocker ps[27m[C[C[C[Cdocker ps
+[?2004lCONTAINER ID   IMAGE                              COMMAND                  CREATED        STATUS                 PORTS                                             NAMES
+baffa410875d   krmaryum/task-manager-api:latest   "docker-entrypoint.s…"   2 months ago   Up 2 hours             0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp       task-manager-app
+0c3a705d4731   mongo:7                            "docker-entrypoint.s…"   2 months ago   Up 2 hours (healthy)   0.0.0.0:27017->27017/tcp, [::]:27017->27017/tcp   task-manager-mongo
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ [7mdocker stop task-manager-app task-manager-mongo[27m[C[C[C[Cdocker stop task-manager-app task-manager-mongo
+[?2004ltask-manager-app
+task-manager-mongo
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ [7mdocker ps[27m[C[C[C[Cdocker ps
+[?2004lCONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ [7mcurl http://localhost:8888/health[27m[C[C[C[Ccurl http://localhost:8888/health
+[?2004lcurl: (7) Failed to connect to localhost port 8888 after 2 ms: Couldn't connect to server
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ [7mgit status[27m[C[C[C[Cgit status
+[?2004lOn branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   mega.txt[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ git add mega.txt 
+[?2004l[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ git commit -m ""C"l"e"a"n"u"p"[C
+[?2004l[main aef69ee] Cleanup
+ 1 file changed, 105 insertions(+), 1 deletion(-)
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ git push
+[?2004lEnumerating objects: 5, done.
+Counting objects:  20% (1/5)Counting objects:  40% (2/5)Counting objects:  60% (3/5)Counting objects:  80% (4/5)Counting objects: 100% (5/5)Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects:  33% (1/3)Compressing objects:  66% (2/3)Compressing objects: 100% (3/3)Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)Writing objects:  66% (2/3)Writing objects: 100% (3/3)Writing objects: 100% (3/3), 2.34 KiB | 599.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas:   0% (0/2)[Kremote: Resolving deltas:  50% (1/2)[Kremote: Resolving deltas: 100% (2/2)[Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To github.com:krmaryum/github-actions-kubernetes-masterclass.git
+   414a3ad..aef69ee  main -> main
+[?2004h]0;khalid@Khalid-laptop: ~/shubham/megaproject/github-actions-kubernetes-masterclass[01;32mkhalid@Khalid-laptop[00m:[01;34m~/shubham/megaproject/github-actions-kubernetes-masterclass[00m$ exit
+[?2004lexit
+
+Script done on 2026-05-17 02:28:02-05:00 [COMMAND_EXIT_CODE="0"]
